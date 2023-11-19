@@ -19,7 +19,7 @@ $ git clone https://github.com/LucasGdBS/Scraperty.git
 ```
 ```bash
 # Acesse a pasta do projeto
-$ cd Scrapy
+$ cd Scraperty
 ```
 ```bash	
 # Instalar as dependências
