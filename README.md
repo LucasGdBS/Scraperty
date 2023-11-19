@@ -27,7 +27,7 @@ $ pip install -r requirements.txt
 ```
 ```bash
 # Executar o projeto
-$ python main.py
+$ python src/main.py
 ```
 Lembre-se que é necessário ter o Python instalado em sua máquina. Caso não tenha, acesse o site oficial [aqui](https://www.python.org/downloads/)
 
