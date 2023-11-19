@@ -92,7 +92,7 @@ class Estrategia:
 
         return tabulate(content, headers=cabecalho, tablefmt='fancy_grid', showindex=True)
 
-class Scrapy:
+class Scraperty:
     '''Classe responsavel por realizar o web scraping'''
     def __init__(self):
         self.__url = 'https://www.fundamentus.com.br/fii_resultado.php'

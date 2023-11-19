@@ -2,9 +2,9 @@
     Script responsável por executar o scraping e 
     filtrar os fundos de acordo com a estratégia definida.
 '''
-from modelos import Estrategia, Scrapy
+from modelos import Estrategia, Scraperty
 
-scrapy = Scrapy()
+scraperty = Scraperty()
 
 strategy = Estrategia(
     cotacao_atual_minima=50.0,
@@ -16,5 +16,5 @@ strategy = Estrategia(
     maxima_vacancia_media=10
 )
 
-resultado = [elemento for elemento in scrapy.scraping() if strategy.filtering(elemento)]
+resultado = [elemento for elemento in scraperty.scraping() if strategy.filtering(elemento)]
 print(strategy.tabulating(resultado))

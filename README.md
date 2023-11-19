@@ -1,7 +1,7 @@
-# Scrapy
+# Scraperty
 
 ## 📚 Descrição
-O Scrapy é um projeto para extrair os dados de Fundos Imobiliários do site [Fundamentus](www.fundamentus.com.br). Um sistema on-line que disponibiliza informações financeiras e fundamentalistas das empresas com ações listadas na Bovespa
+O Scraperty é um projeto para extrair os dados de Fundos Imobiliários do site [Fundamentus](www.fundamentus.com.br). Um sistema on-line que disponibiliza informações financeiras e fundamentalistas das empresas com ações listadas na Bovespa
 
 ## 🎯 Objetivo
 Colocar em prática conhecimentos de web scraping e tratamento de dados com Python
@@ -15,7 +15,7 @@ Colocar em prática conhecimentos de web scraping e tratamento de dados com Pyth
 ## 📂 Como baixar o projeto
 ```bash
 # Clonar o repositório
-$ git clone https://github.com/LucasGdBS/Scrapy.git
+$ git clone https://github.com/LucasGdBS/Scraperty.git
 ```
 ```bash
 # Acesse a pasta do projeto
