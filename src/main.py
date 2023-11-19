@@ -17,4 +17,4 @@ strategy = Estrategia(
 )
 
 resultado = [elemento for elemento in scraperty.scraping() if strategy.filtering(elemento)]
-print(strategy.tabulating(resultado))
+print(scraperty.tabulating(resultado))

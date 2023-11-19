@@ -38,8 +38,6 @@ class FundoImobiliario:
 class Estrategia:
     '''Classe para representar uma estratégia de filtro de fundos imobiliários'''
 
-    locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8') # Define o locale para pt_BR
-
     def __init__(self, segmento='', cotacao_atual_minima=0, ffo_yield_minimo=0,
                 dividiend_yield_minimo=0, p_vp_minimo=0,
                 valor_mercado_minimo=0, liquidez_minima=0, qt_imoveis_minimo=0,
@@ -78,19 +76,6 @@ class Estrategia:
 
         return True
 
-    def tabulating(self, table):
-        '''Tabula os fundos imobiliários
-        Recomenda-se filtrar antes de tabular
-        :param table: Lista de fundos imobiliários
-        :return: Tabela formatada'''
-        cabecalho = ['CÓDIGO', 'SEGMENTO', 'COTAÇÃO ATUAL', 'DIVIDEND YIELD']
-        content = []
-        for elemento in table:
-            content.append([elemento.codigo, elemento.segmento,
-                            locale.currency(elemento.cotacao_atual),
-                            f'{locale.str(elemento.dividiend_yield)}%'])
-
-        return tabulate(content, headers=cabecalho, tablefmt='fancy_grid', showindex=True)
 
 class Scraperty:
     '''Classe responsavel por realizar o web scraping'''
@@ -130,3 +115,17 @@ class Scraperty:
             resultado.append(fundo_imobiliario)
 
         return resultado
+
+    def tabulating(self, table):
+        '''Tabula os fundos imobiliários
+        Recomenda-se filtrar antes de tabular
+        :param table: Lista de fundos imobiliários
+        :return: Tabela formatada'''
+        cabecalho = ['CÓDIGO', 'SEGMENTO', 'COTAÇÃO ATUAL', 'DIVIDEND YIELD']
+        content = []
+        for elemento in table:
+            content.append([elemento.codigo, elemento.segmento,
+                            locale.currency(elemento.cotacao_atual),
+                            f'{locale.str(elemento.dividiend_yield)}%'])
+
+        return tabulate(content, headers=cabecalho, tablefmt='fancy_grid', showindex=True)
